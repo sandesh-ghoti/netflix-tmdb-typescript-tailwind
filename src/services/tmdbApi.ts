@@ -23,6 +23,9 @@ import {
   TvShowDiscoverResult,
   MovieList,
   MovieLists,
+  PopularMovies,
+  PopularTvShows,
+  PopularPersons,
 } from "tmdb-ts";
 import {
   MediaParamsOptions,
@@ -114,18 +117,39 @@ const tmdbApi = createApi({
           return { url: `tv/airing_today`, params: params };
         },
       }),
-      getTVShowDetails: builder.query<TvShowDetails, TvShowParamsOptions>({
+      // get popular movies
+      getPopularMovies: builder.query<PopularMovies, ParamsOptions>({
         query: (params) => {
-          const { media_type, id } = params;
-          return { url: `${media_type}/${id}` };
+          return { url: `movie/popular`, params: params };
         },
       }),
-      getMovieDetails: builder.query<MovieDetails, MovieParamsOptions>({
+      // get popular tv shows
+      getPopularTvs: builder.query<PopularTvShows, ParamsOptions>({
         query: (params) => {
-          const { media_type, id } = params;
-          return { url: `${media_type}/${id}` };
+          return { url: `tv/popular`, params: params };
         },
       }),
+      // get popular people
+      getPopularPeople: builder.query<PopularPersons, ParamsOptions>({
+        query: (params) => {
+          return { url: `person/popular`, params: params };
+        },
+      }),
+      // Get tvshow Details
+      getTVShowDetails: builder.query<TvShowDetails, { id: string }>({
+        query: (params) => {
+          const { id } = params;
+          return { url: `tv/${id}` };
+        },
+      }),
+      // Get Movie Details
+      getMovieDetails: builder.query<MovieDetails, { id: string }>({
+        query: (params) => {
+          const { id } = params;
+          return { url: `movie/${id}` };
+        },
+      }),
+      // Get Videos
       getVideos: builder.query<Videos, MediaParamsOptions>({
         query: (params) => {
           const { media_type, id } = params;
@@ -281,5 +305,8 @@ export const {
   useGetFavoriteTvQuery,
   useGetWatchlistMoviesQuery,
   useGetWatchlistTvQuery,
+  useGetPopularMoviesQuery,
+  useGetPopularTvsQuery,
+  useGetPopularPeopleQuery,
 } = tmdbApi;
 export { tmdbApi };
