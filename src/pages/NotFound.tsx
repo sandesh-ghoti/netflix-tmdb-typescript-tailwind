@@ -3,7 +3,7 @@ import { NavLink } from "react-router-dom";
 
 interface INotFoundProps {}
 
-const NotFound: React.FunctionComponent<INotFoundProps> = () => {
+export const NotFound: React.FunctionComponent<INotFoundProps> = () => {
   return (
     <section className="bg-white dark:bg-gray-900">
       <div className="py-8 px-4 mx-auto max-w-screen-xl lg:py-16 lg:px-6">
@@ -29,5 +29,4 @@ const NotFound: React.FunctionComponent<INotFoundProps> = () => {
     </section>
   );
 };
-
 export default NotFound;

@@ -1,7 +1,6 @@
 import * as React from "react";
 import { useParams } from "react-router-dom";
 import { useGetPopularPeopleQuery } from "../services/tmdbApi";
-import { PosterCard } from "../components/PosterCard";
 import { ItemCardList } from "../components/ItemCardList";
 
 export const PersonPage: React.FC = () => {
@@ -35,3 +34,4 @@ export const PersonPage: React.FC = () => {
     </div>
   );
 };
+export default PersonPage;

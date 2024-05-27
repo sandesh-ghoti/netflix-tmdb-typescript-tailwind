@@ -2,8 +2,9 @@ import * as React from "react";
 
 interface IPersonDetailsProps {}
 
-const PersonDetails: React.FunctionComponent<IPersonDetailsProps> = (props) => {
+export const PersonDetails: React.FunctionComponent<
+  IPersonDetailsProps
+> = () => {
   return <></>;
 };
-
 export default PersonDetails;

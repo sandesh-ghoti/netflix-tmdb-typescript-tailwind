@@ -47,3 +47,4 @@ export const MoviesPage: React.FC = () => {
     </div>
   );
 };
+export default MoviesPage;

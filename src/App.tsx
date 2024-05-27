@@ -1,14 +1,16 @@
 import { createBrowserRouter, Outlet, RouterProvider } from "react-router-dom";
-import { HomePage } from "./pages";
 import Navbar from "./components/Navbar";
 import Footer from "./components/Footer";
-import MovieDetails from "./pages/MovieDetails";
-import TvShowDetails from "./pages/TvShowDetails";
-import PersonDetails from "./pages/PersonDetails";
-import NotFound from "./pages/NotFound";
-import { MoviesPage } from "./pages/MoviesPage";
-import { TvShowsPage } from "./pages/TvShowsPage";
-import { PersonPage } from "./pages/PersonPage";
+import {
+  MoviesPage,
+  TvShowsPage,
+  TvShowDetails,
+  PersonPage,
+  HomePage,
+  MovieDetails,
+  PersonDetails,
+  NotFound,
+} from "./pages";
 const router = createBrowserRouter([
   {
     path: "/",

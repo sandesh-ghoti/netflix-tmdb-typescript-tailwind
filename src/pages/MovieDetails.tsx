@@ -14,7 +14,7 @@ import { uniqueCrew } from "../utils/uniqueCrews";
 
 interface IMovieDetailsProps {}
 
-const MovieDetails: React.FunctionComponent<IMovieDetailsProps> = () => {
+export const MovieDetails: React.FunctionComponent<IMovieDetailsProps> = () => {
   const { id } = useParams<{ id: string }>();
   const navigate = useNavigate();
   const [popupVideo, setPopupVideo] = React.useState<{
@@ -125,5 +125,4 @@ const MovieDetails: React.FunctionComponent<IMovieDetailsProps> = () => {
     )
   );
 };
-
 export default MovieDetails;

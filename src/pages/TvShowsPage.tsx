@@ -6,7 +6,6 @@ import {
   useGetOnTheAirTvsQuery,
   useGetTopRatedTvsQuery,
 } from "../services/tmdbApi";
-import { PosterCard } from "../components/PosterCard";
 import { ItemCardList } from "../components/ItemCardList";
 
 export const TvShowsPage: React.FC = () => {
@@ -48,3 +47,4 @@ export const TvShowsPage: React.FC = () => {
     </div>
   );
 };
+export default TvShowsPage;
