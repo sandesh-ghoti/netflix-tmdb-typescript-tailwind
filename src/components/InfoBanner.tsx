@@ -1,10 +1,21 @@
 import * as React from "react";
-import { MovieDetails } from "tmdb-ts";
 import { IMG_CONFIG } from "../constants";
 import { Ratings } from "./Ratings";
 
 interface IInfoBannerProps {
-  data: MovieDetails;
+  data: {
+    backdrop_path: string;
+    poster_path: string;
+    title: string;
+    release_date: string;
+    tagline: string;
+    vote_average: number;
+    vote_count: number;
+    genres: { name: string }[];
+    runtime: number;
+    status: string;
+    overview: string;
+  };
 }
 
 const InfoBanner: React.FunctionComponent<IInfoBannerProps> = ({ data }) => {

@@ -174,16 +174,16 @@ const tmdbApi = createApi({
           return { url: `${media_type}/${id}/similar`, params: params };
         },
       }),
-      getMovieCredits: builder.query<Credits, MovieParamsOptions>({
+      getMovieCredits: builder.query<Credits, { id: string }>({
         query: (params) => {
-          const { media_type, id } = params;
-          return { url: `${media_type}/${id}/credits`, params: params };
+          const { id } = params;
+          return { url: `movie/${id}/credits`, params: params };
         },
       }),
-      getTvShowCredits: builder.query<Credits, TvShowParamsOptions>({
+      getTvShowCredits: builder.query<Credits, { id: string }>({
         query: (params) => {
-          const { media_type, id } = params;
-          return { url: `${media_type}/${id}/credits`, params: params };
+          const { id } = params;
+          return { url: `tv/${id}/credits`, params: params };
         },
       }),
       // Search Endpoint

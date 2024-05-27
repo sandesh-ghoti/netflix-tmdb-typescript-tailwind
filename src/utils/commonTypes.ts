@@ -6,7 +6,7 @@ import {
   ChangeOption,
 } from "tmdb-ts";
 export interface MediaParamsOptions {
-  id: number;
+  id: number | string;
   media_type: "movie" | "tv" | "person";
 }
 export interface ParamsOptions
