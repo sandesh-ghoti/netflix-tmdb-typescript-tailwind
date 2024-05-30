@@ -184,20 +184,26 @@ const tmdbApi = createApi({
       getMovieDetails: builder.query<MovieDetails, { id: string }>({
         query: (params) => {
           const { id } = params;
-          return { url: `movie/${id}` };
+          return { url: `movie/${id}`, params: { api_key: TMDB_API_KEY } };
         },
       }),
       // Get Videos
       getVideos: builder.query<Videos, MediaParamsOptions>({
         query: (params) => {
           const { media_type, id } = params;
-          return { url: `${media_type}/${id}/videos` };
+          return {
+            url: `${media_type}/${id}/videos`,
+            params: { api_key: TMDB_API_KEY },
+          };
         },
       }),
       getTvSeasonVideos: builder.query<Videos, TvSeasonParamsOptions>({
         query: (params) => {
           const { media_type, id, season_number } = params;
-          return { url: `${media_type}/${season_number}/${id}/videos` };
+          return {
+            url: `${media_type}/${season_number}/${id}/videos`,
+            params: { api_key: TMDB_API_KEY },
+          };
         },
       }),
       getMovieSimilar: builder.query<SimilarMovies, MovieParamsOptions>({

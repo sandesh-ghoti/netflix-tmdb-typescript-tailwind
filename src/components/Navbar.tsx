@@ -139,6 +139,7 @@ const Navbar: React.FunctionComponent<INavbarProps> = () => {
                 className="w-full h-full object-cover"
                 src={`https://www.gravatar.com/avatar/${accountDetails?.avatar.gravatar.hash}`}
                 alt="avatar"
+                onClick={() => navigate(`/profile/${accountDetails.username}`)}
               />
             </div>
           )}
