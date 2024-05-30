@@ -9,7 +9,7 @@ import {
   useSetSessionTokenMutation,
 } from "../store";
 import { ErrorResponse, ValidateLoginResponse } from "../utils/commonTypes";
-import { useNavigate } from "react-router-dom";
+import { useLocation, useNavigate } from "react-router-dom";
 const LoginComponent: React.FC = () => {
   const [username, setUsername] = useState("");
   const [password, setPassword] = useState("");
@@ -17,6 +17,8 @@ const LoginComponent: React.FC = () => {
   const [error, setError] = useState<string | null>(null);
   const navigate = useNavigate();
   const dispatch = useAppDispatch();
+  const location = useLocation();
+
   const {
     data: requestToken,
     isLoading: isRequestTokenLoading,
@@ -26,6 +28,7 @@ const LoginComponent: React.FC = () => {
   const handleLogin = async () => {
     setError(null);
     setLoading(true);
+    const from = location.state?.from?.pathname || "/";
     try {
       dispatch(loginIntialise());
       if (!requestToken?.request_token) {
@@ -70,7 +73,7 @@ const LoginComponent: React.FC = () => {
       }
       dispatch(loginSuccess(sessionResponse.data.session_id));
       setLoading(false);
-      navigate("/");
+      navigate(from, { replace: true });
     } catch (error) {
       dispatch(loginFailure((error as Error).message));
       setError((error as Error).message);

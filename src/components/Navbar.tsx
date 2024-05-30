@@ -1,5 +1,5 @@
 import * as React from "react";
-import { NavLink, useNavigate } from "react-router-dom";
+import { NavLink, useLocation, useNavigate } from "react-router-dom";
 import {
   logout,
   sessionId,
@@ -57,6 +57,7 @@ const Navbar: React.FunctionComponent<INavbarProps> = () => {
   const navRef = React.useRef<HTMLDivElement>(null);
   const sessionToken = useAppSelector(sessionId);
   const dispatch = useAppDispatch();
+  const location = useLocation();
 
   const { data: fetchAccountDetails, refetch } = useGetAccountDetailsQuery(
     { session_id: sessionToken || "" },
@@ -105,7 +106,7 @@ const Navbar: React.FunctionComponent<INavbarProps> = () => {
       dispatch(logout());
       setAccountDetails(null);
     } else {
-      navigate("/authentication");
+      navigate("/authentication", { state: { from: location } });
     }
   };
 
