@@ -1,4 +1,5 @@
 import { createSlice, PayloadAction } from "@reduxjs/toolkit";
+import { tmdbApi } from "../services/tmdbApi";
 // currently no use of whole AuthSlice
 export interface AuthState {
   loading: boolean;
@@ -29,6 +30,8 @@ const authSlice = createSlice({
     },
     logout: (state) => {
       state.sessionId = null;
+      tmdbApi.util.invalidateTags(["Account"]);
+      tmdbApi.util.resetApiState();
     },
   },
   selectors: {

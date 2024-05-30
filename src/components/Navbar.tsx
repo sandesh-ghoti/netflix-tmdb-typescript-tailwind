@@ -1,7 +1,14 @@
 import * as React from "react";
 import { NavLink, useNavigate } from "react-router-dom";
-import { logout, sessionId, useAppDispatch, useAppSelector } from "../store";
-
+import {
+  logout,
+  sessionId,
+  useAppDispatch,
+  useAppSelector,
+  useGetAccountDetailsQuery,
+} from "../store";
+import { MenuSquareIcon } from "lucide-react";
+import { AccountDetails } from "tmdb-ts/dist/types/account";
 interface INavbarProps {}
 
 interface NavItem {
@@ -44,11 +51,28 @@ const Navbar: React.FunctionComponent<INavbarProps> = () => {
 
   const [openSubMenu, setOpenSubMenu] = React.useState<string | null>(null);
   const [isMenuOpen, setIsMenuOpen] = React.useState<boolean>(false);
+  const [accountDetails, setAccountDetails] =
+    React.useState<AccountDetails | null>(null);
   const navigate = useNavigate();
   const navRef = React.useRef<HTMLDivElement>(null);
   const sessionToken = useAppSelector(sessionId);
   const dispatch = useAppDispatch();
 
+  const { data: fetchAccountDetails, refetch } = useGetAccountDetailsQuery(
+    { session_id: sessionToken || "" },
+    { skip: !sessionToken }
+  );
+
+  React.useEffect(() => {
+    if (sessionToken) {
+      refetch();
+    }
+  }, [sessionToken, refetch]);
+  React.useEffect(() => {
+    if (fetchAccountDetails) {
+      setAccountDetails(fetchAccountDetails);
+    }
+  }, [fetchAccountDetails]);
   const handleMouseOver = (title: string) => {
     setOpenSubMenu(title);
   };
@@ -75,9 +99,11 @@ const Navbar: React.FunctionComponent<INavbarProps> = () => {
       closeMenus();
     }
   };
+
   const handleAuthentication = () => {
     if (sessionToken) {
       dispatch(logout());
+      setAccountDetails(null);
     } else {
       navigate("/authentication");
     }
@@ -106,6 +132,15 @@ const Navbar: React.FunctionComponent<INavbarProps> = () => {
           </div>
         </NavLink>
         <div className="flex md:order-2 space-x-3 md:space-x-0 rtl:space-x-reverse">
+          {accountDetails?.avatar.gravatar.hash && (
+            <div className=" w-5 h-5 md:w-10 md:h-10 mr-2 rounded-full overflow-hidden">
+              <img
+                className="w-full h-full object-cover"
+                src={`https://www.gravatar.com/avatar/${accountDetails?.avatar.gravatar.hash}`}
+                alt="avatar"
+              />
+            </div>
+          )}
           <button
             type="button"
             className="text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg px-4 py-2 text-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800"
@@ -123,21 +158,7 @@ const Navbar: React.FunctionComponent<INavbarProps> = () => {
             aria-expanded={isMenuOpen}
           >
             <span className="sr-only">Open main menu</span>
-            <svg
-              className="w-5 h-5"
-              aria-hidden="true"
-              xmlns="http://www.w3.org/2000/svg"
-              fill="none"
-              viewBox="0 0 17 14"
-            >
-              <path
-                stroke="currentColor"
-                strokeLinecap="round"
-                strokeLinejoin="round"
-                strokeWidth="2"
-                d="M1 1h15M1 7h15M1 13h15"
-              />
-            </svg>
+            <MenuSquareIcon className="w-6 h-6" aria-hidden="true" />
           </button>
         </div>
         <div

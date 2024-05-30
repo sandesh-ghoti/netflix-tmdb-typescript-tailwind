@@ -44,11 +44,8 @@ const tmdbApi = createApi({
   reducerPath: "tmdbApi",
   baseQuery: fetchBaseQuery({
     baseUrl: BASE_URL,
-    // prepareHeaders: (headers) => {
-    //   headers.set("authorization", `Bearer ${TMDB_ACCESS_TOKEN}`);
-    //   return headers;
-    // },
   }),
+  tagTypes: ["Account"],
   endpoints(builder) {
     return {
       // Trending Movies (Week)
@@ -288,13 +285,22 @@ const tmdbApi = createApi({
         },
       }),
       // user account
-      getAccountDetails: builder.query<AccountDetails, UserParamsOption>({
+      getAccountDetails: builder.query<
+        AccountDetails,
+        Omit<UserParamsOption, "account_id">
+      >({
         query: (params) => {
           return {
-            url: `account/${params.account_id}`,
-            params: { api_key: TMDB_API_KEY, ...params },
+            url: `account`,
+            params: {
+              api_key: TMDB_API_KEY,
+              session_id: params.session_id,
+              ...params.params,
+            },
           };
         },
+        providesTags: (result) =>
+          result ? [{ type: "Account", id: result.id }] : [{ type: "Account" }],
       }),
       // Add to Favorite in user account
       setFavorite: builder.mutation<SuccessResponse, UserMediaParamsOption>({
