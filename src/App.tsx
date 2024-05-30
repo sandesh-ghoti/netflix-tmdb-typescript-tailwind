@@ -1,5 +1,6 @@
 import { createBrowserRouter, Outlet, RouterProvider } from "react-router-dom";
 import React, { Suspense } from "react";
+import LoginComponent from "./components/Authentication";
 
 const Navbar = React.lazy(() => import("./components/Navbar"));
 const Footer = React.lazy(() => import("./components/Footer"));
@@ -82,6 +83,14 @@ const router = createBrowserRouter([
         element: (
           <Suspense fallback={<div>PersonPage...</div>}>
             <PersonPage />
+          </Suspense>
+        ),
+      },
+      {
+        path: "/authentication",
+        element: (
+          <Suspense fallback={<div>Authentication...</div>}>
+            <LoginComponent />
           </Suspense>
         ),
       },

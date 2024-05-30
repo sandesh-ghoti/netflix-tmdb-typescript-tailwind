@@ -1,5 +1,6 @@
 import * as React from "react";
-import { NavLink } from "react-router-dom";
+import { NavLink, useNavigate } from "react-router-dom";
+import { logout, sessionId, useAppDispatch, useAppSelector } from "../store";
 
 interface INavbarProps {}
 
@@ -43,8 +44,10 @@ const Navbar: React.FunctionComponent<INavbarProps> = () => {
 
   const [openSubMenu, setOpenSubMenu] = React.useState<string | null>(null);
   const [isMenuOpen, setIsMenuOpen] = React.useState<boolean>(false);
-
+  const navigate = useNavigate();
   const navRef = React.useRef<HTMLDivElement>(null);
+  const sessionToken = useAppSelector(sessionId);
+  const dispatch = useAppDispatch();
 
   const handleMouseOver = (title: string) => {
     setOpenSubMenu(title);
@@ -70,6 +73,13 @@ const Navbar: React.FunctionComponent<INavbarProps> = () => {
   const handleClickOutside = (event: MouseEvent) => {
     if (navRef.current && !navRef.current.contains(event.target as Node)) {
       closeMenus();
+    }
+  };
+  const handleAuthentication = () => {
+    if (sessionToken) {
+      dispatch(logout());
+    } else {
+      navigate("/authentication");
     }
   };
 
@@ -99,9 +109,11 @@ const Navbar: React.FunctionComponent<INavbarProps> = () => {
           <button
             type="button"
             className="text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg px-4 py-2 text-center dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800"
+            onClick={handleAuthentication}
           >
-            SignIn/SignUp
+            {sessionToken ? "SignOut" : "SignIn/SignUp"}
           </button>
+
           {/* Hamburger menu */}
           <button
             onClick={toggleMenu}

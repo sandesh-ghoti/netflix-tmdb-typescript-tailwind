@@ -74,6 +74,5 @@ export function isTV(item: Movie | TV | Person): item is TV {
 }
 
 export function isPerson(item: Movie | TV | Person): item is Person {
-  console.log("isPerson function called", item);
   return (item as Person).profile_path !== undefined;
 }
