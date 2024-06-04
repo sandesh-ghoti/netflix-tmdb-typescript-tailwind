@@ -61,11 +61,17 @@ const InfoBanner: React.FunctionComponent<IInfoBannerProps> = ({ data }) => {
             <h4 className="font-bold text-slate-100">Total Votes</h4>:{" "}
             <span>{data?.vote_count}</span>
           </div>
-          <div className="flex flex-row flex-wrap gap-2 max-md:text-sm max-md:gap-1 my-1">
+          <div
+            className="flex flex-row flex-wrap gap-2 max-md:text-sm max-md:gap-1 my-1"
+            data-testid="genres"
+          >
             <h4 className="font-bold text-slate-100">Geners</h4>:{" "}
             <span>{data.genres.map((genre) => genre.name).join(", ")}</span>
           </div>
-          <div className="flex flex-row flex-wrap gap-2 max-md:text-sm max-md:gap-1 my-1">
+          <div
+            className="flex flex-row flex-wrap gap-2 max-md:text-sm max-md:gap-1 my-1"
+            data-testid="runtime"
+          >
             <h4 className="font-bold text-slate-100">Runtime</h4>:{" "}
             <span>{data?.runtime} minutes</span>
           </div>
