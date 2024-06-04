@@ -21,8 +21,6 @@ import {
   MultiSearchResult,
   MovieDiscoverResult,
   TvShowDiscoverResult,
-  MovieList,
-  MovieLists,
   PopularMovies,
   PopularTvShows,
   PopularPersons,
@@ -361,7 +359,7 @@ const tmdbApi = createApi({
         },
       }),
       // get favorite movie from user account
-      getFavoriteMovie: builder.query<MovieLists, UserParamsOption>({
+      getFavoriteMovie: builder.query<MovieDiscoverResult, UserParamsOption>({
         query: (params) => {
           return {
             url: `account/${params.account_id}/favorite/movies`,
@@ -387,7 +385,7 @@ const tmdbApi = createApi({
         },
       }),
       // get watchlist movies from user account
-      getWatchlistMovies: builder.query<MovieList, UserParamsOption>({
+      getWatchlistMovies: builder.query<MovieDiscoverResult, UserParamsOption>({
         query: (params) => {
           return {
             url: `account/${params.account_id}/watchlist/movies`,
