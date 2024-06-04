@@ -84,7 +84,7 @@ export const TvShowDetails: React.FunctionComponent<
                 heading: item.name,
                 profile_path: item.profile_path,
                 subHeading: item.character,
-                redirect: "/people/details",
+                redirect: "/person/details",
               }))}
             />
           </div>
@@ -98,7 +98,7 @@ export const TvShowDetails: React.FunctionComponent<
                   heading: item.name,
                   profile_path: item.profile_path,
                   subHeading: item.job,
-                  redirect: "/people/details",
+                  redirect: "/person/details",
                 })
               )}
             />

@@ -82,7 +82,7 @@ const App: React.FC<IAppProps> = () => {
           ),
         },
         {
-          path: "/people/details/:id",
+          path: "/person/details/:id",
           element: (
             <Suspense fallback={<div>PersonDetails...</div>}>
               <PersonDetails />

@@ -20,7 +20,7 @@ export const CastCard: React.FunctionComponent<ICastCardProps> = (data) => {
   };
   return (
     <div
-      className=" flex flex-col w-full h-full justify-center overflow-hidden bg-slate-700 bg-opacity-25 rounded-lg shadow-md shadow-gray-700"
+      className=" flex flex-col w-full h-full justify-center overflow-hidden bg-slate-700 bg-opacity-25 rounded-lg shadow-md shadow-gray-700 cursor-pointer"
       onClick={handleRedirect}
     >
       <img

@@ -134,7 +134,7 @@ const Navbar: React.FunctionComponent<INavbarProps> = () => {
         </NavLink>
         <div className="flex md:order-2 space-x-3 md:space-x-0 rtl:space-x-reverse">
           {accountDetails?.avatar.gravatar.hash && (
-            <div className=" w-5 h-5 md:w-10 md:h-10 mr-2 rounded-full overflow-hidden">
+            <div className=" w-5 h-5 md:w-10 md:h-10 mr-2 rounded-full overflow-hidden cursor-pointer">
               <img
                 className="w-full h-full object-cover"
                 src={`https://www.gravatar.com/avatar/${accountDetails?.avatar.gravatar.hash}`}
@@ -198,7 +198,7 @@ const Navbar: React.FunctionComponent<INavbarProps> = () => {
                         <NavLink
                           key={submenu.path}
                           to={submenu.path}
-                          className="block px-4 py-2 hover:bg-gray-200 dark:hover:bg-gray-600"
+                          className="block px-4 py-2 hover:bg-gray-200 dark:hover:bg-gray-600 hover:rounded-lg"
                           onClick={closeMenus}
                         >
                           {submenu.title}

@@ -82,7 +82,7 @@ export const MovieDetails: React.FunctionComponent<IMovieDetailsProps> = () => {
                 heading: item.name,
                 profile_path: item.profile_path,
                 subHeading: item.character,
-                redirect: "/people/details",
+                redirect: "/person/details",
               }))}
             />
           </div>
@@ -96,7 +96,7 @@ export const MovieDetails: React.FunctionComponent<IMovieDetailsProps> = () => {
                   heading: item.name,
                   profile_path: item.profile_path,
                   subHeading: item.job,
-                  redirect: "/people/details",
+                  redirect: "/person/details",
                 })
               )}
             />

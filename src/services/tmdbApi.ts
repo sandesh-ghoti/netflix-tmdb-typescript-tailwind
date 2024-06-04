@@ -175,7 +175,7 @@ const tmdbApi = createApi({
       getTVShowDetails: builder.query<TvShowDetails, { id: string }>({
         query: (params) => {
           const { id } = params;
-          return { url: `tv/${id}` };
+          return { url: `tv/${id}`, params: { api_key: TMDB_API_KEY } };
         },
       }),
       // Get Movie Details
@@ -242,7 +242,12 @@ const tmdbApi = createApi({
       }),
       // Search Endpoint
       searchMulti: builder.query<Search<MultiSearchResult>, String>({
-        query: (query) => `search/multi?query=${query}`,
+        query: (query) => {
+          return {
+            url: `search/multi?query=${query}`,
+            params: { api_key: TMDB_API_KEY },
+          };
+        },
       }),
       // discover movie
       discoverMovies: builder.query<MovieDiscoverResult, ParamsOptions>({
