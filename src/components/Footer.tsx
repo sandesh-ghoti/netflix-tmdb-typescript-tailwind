@@ -2,7 +2,7 @@ import * as React from "react";
 
 interface IFooterProps {}
 
-const Footer: React.FunctionComponent<IFooterProps> = (props) => {
+const Footer: React.FunctionComponent<IFooterProps> = () => {
   return <></>;
 };
 

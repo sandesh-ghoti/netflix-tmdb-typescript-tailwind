@@ -12,13 +12,10 @@ export const HomePage: React.FC = () => {
   } = useGetTrendingMoviesWeekQuery({
     page: 1,
   });
-  const {
-    data: trendingTv,
-    error: trendingTvError,
-    isLoading: trendingTvLoading,
-  } = useGetTrendingTvsWeekQuery({
-    page: 1,
-  });
+  const { data: trendingTv, isLoading: trendingTvLoading } =
+    useGetTrendingTvsWeekQuery({
+      page: 1,
+    });
 
   if (trendingMoviesLoading) return <div>Loading...</div>;
   if (trendingMoviesError) return <div>Error loading data.</div>;
