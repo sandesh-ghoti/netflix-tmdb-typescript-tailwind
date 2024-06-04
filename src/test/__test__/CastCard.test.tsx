@@ -37,4 +37,8 @@ describe("CastCard", async () => {
     const subHeading = screen.getByText(data.subHeading);
     expect(subHeading).toBeInTheDocument();
   });
+  test("test snapshot", () => {
+    const castCard = renderWithProviders(<CastCard {...data} />);
+    expect(castCard).toMatchSnapshot();
+  });
 });

@@ -15,6 +15,7 @@ export const VideoCard: React.FC<IVideoCardProps> = ({ data, onClick }) => {
     data?.key && (
       <div
         className="w-full aspect-video ring-2 rounded-md shadow-sm shadow-stone-400 flex justify-center items-center cursor-pointer"
+        data-testid="video-card"
         style={{
           backgroundImage: `url(${
             YT_THUMBNAIL_URL + data.key + "/hqdefault.jpg"
@@ -26,7 +27,7 @@ export const VideoCard: React.FC<IVideoCardProps> = ({ data, onClick }) => {
         onClick={() => onClick(data.key, data.videoName)}
       >
         <div className="rounded-full bg-slate-800 bg-opacity-30">
-          <PlayCircle className="text-3xl m-2" />
+          <PlayCircle className="text-3xl m-2" data-testid="play-icon" />
         </div>
       </div>
     )

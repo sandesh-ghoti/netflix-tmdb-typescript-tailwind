@@ -35,5 +35,20 @@ export function renderWithProviders(
   return { store, ...render(ui, { wrapper: Wrapper, ...renderOptions }) };
 }
 
+export function renderWithProvidersWithoutRouter(
+  ui: React.ReactElement,
+  {
+    preloadedState = {},
+    // Automatically create a store instance if no store was passed in
+    store = setupStore(preloadedState),
+    ...renderOptions
+  }: ExtendedRenderOptions = {}
+) {
+  function Wrapper({ children }: PropsWithChildren<{}>): JSX.Element {
+    return <Provider store={store}>{children}</Provider>;
+  }
+  return { store, ...render(ui, { wrapper: Wrapper, ...renderOptions }) };
+}
+
 export * from "@testing-library/react";
 export { default as userEvent } from "@testing-library/user-event";

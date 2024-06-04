@@ -1,0 +1,514 @@
+// Vitest Snapshot v1, https://vitest.dev/guide/snapshot.html
+
+exports[`test snapshot 1`] = `
+{
+  "asFragment": [Function],
+  "baseElement": <body>
+    <div>
+      <section
+        style="width: 100%; height: 100%; background-image: url(https://image.tmdb.org/t/p/original/fqv8v6AycXKsivp1T5yKtLbGXce.jpg); background-size: cover; background-position: center; background-repeat: no-repeat;"
+      >
+        <div
+          class=" w-full h-full mx-auto bg-slate-900 bg-opacity-70 grid grid-cols-3 xl:grid-cols-4 gap-4 items-center overflow-hidden p-8 mt-6"
+        >
+          <img
+            alt="Kingdom of the Planet of the Apes"
+            class=" col-span-1 rounded-md shadow-md shadow-slate-400 my-auto"
+            src="https://image.tmdb.org/t/p/w500/gKkl37BQuKTanygYQG1pyYgLVgf.jpg"
+          />
+          <div
+            class="col-span-2 xl:col-span-3 my-auto flex flex-col"
+          >
+            <h1
+              class="text-xl font-bold text-slate-100 my-2 md:text-2xl lg:text-3xl"
+            >
+              Kingdom of the Planet of the Apes
+               (
+              2024
+              )
+            </h1>
+            <span
+              class="text-sm mb-4 font-serif italic"
+            >
+              No one can stop the reign.
+            </span>
+            <div
+              class="my-1"
+            >
+              <div
+                class="flex items-center gap-1"
+              >
+                <svg
+                  class="lucide lucide-star text-yellow-500 text-yellow-500"
+                  fill="currentColor"
+                  height="20"
+                  stroke="currentColor"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="2"
+                  viewBox="0 0 24 24"
+                  width="20"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <polygon
+                    points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"
+                  />
+                </svg>
+                <svg
+                  class="lucide lucide-star text-yellow-500 text-yellow-500"
+                  fill="currentColor"
+                  height="20"
+                  stroke="currentColor"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="2"
+                  viewBox="0 0 24 24"
+                  width="20"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <polygon
+                    points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"
+                  />
+                </svg>
+                <svg
+                  class="lucide lucide-star text-yellow-500 text-yellow-500"
+                  fill="currentColor"
+                  height="20"
+                  stroke="currentColor"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="2"
+                  viewBox="0 0 24 24"
+                  width="20"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <polygon
+                    points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"
+                  />
+                </svg>
+                <div
+                  style="position: relative; display: inline-block; width: 20px; height: 20px;"
+                >
+                  <svg
+                    class="lucide lucide-star text-yellow-500 text-yellow-500"
+                    fill="none"
+                    height="20"
+                    stroke="currentColor"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    stroke-width="2"
+                    viewBox="0 0 24 24"
+                    width="20"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <polygon
+                      points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"
+                    />
+                  </svg>
+                  <div
+                    style="position: absolute; top: 0px; overflow: hidden; width: 50%;"
+                  >
+                    <svg
+                      class="lucide lucide-star text-yellow-500 text-yellow-500"
+                      fill="currentColor"
+                      height="20"
+                      stroke="currentColor"
+                      stroke-linecap="round"
+                      stroke-linejoin="round"
+                      stroke-width="2"
+                      viewBox="0 0 24 24"
+                      width="20"
+                      xmlns="http://www.w3.org/2000/svg"
+                    >
+                      <polygon
+                        points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"
+                      />
+                    </svg>
+                  </div>
+                </div>
+                <svg
+                  class="lucide lucide-star text-yellow-500 text-gray-200"
+                  fill="transparent"
+                  height="20"
+                  stroke="currentColor"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="2"
+                  viewBox="0 0 24 24"
+                  width="20"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <polygon
+                    points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"
+                  />
+                </svg>
+                <span
+                  class="bg-blue-100 text-blue-800 text-xs font-semibold px-2.5 py-0.5 rounded dark:bg-blue-200 dark:text-blue-800"
+                >
+                  3.5
+                </span>
+              </div>
+            </div>
+            <div
+              class="flex flex-row flex-wrap gap-2 max-md:text-sm max-md:gap-1 my-1"
+            >
+              <h4
+                class="font-bold text-slate-100"
+              >
+                Total Votes
+              </h4>
+              :
+               
+              <span>
+                719
+              </span>
+            </div>
+            <div
+              class="flex flex-row flex-wrap gap-2 max-md:text-sm max-md:gap-1 my-1"
+              data-testid="genres"
+            >
+              <h4
+                class="font-bold text-slate-100"
+              >
+                Geners
+              </h4>
+              :
+               
+              <span>
+                Science Fiction, Adventure, Action
+              </span>
+            </div>
+            <div
+              class="flex flex-row flex-wrap gap-2 max-md:text-sm max-md:gap-1 my-1"
+              data-testid="runtime"
+            >
+              <h4
+                class="font-bold text-slate-100"
+              >
+                Runtime
+              </h4>
+              :
+               
+              <span>
+                145
+                 minutes
+              </span>
+            </div>
+            <div
+              class="flex flex-row flex-wrap gap-2 max-md:text-sm max-md:gap-1 my-1"
+            >
+              <h4
+                class="font-bold text-slate-100"
+              >
+                Release Date
+              </h4>
+              :
+               
+              <span>
+                2024-05-08
+              </span>
+            </div>
+            <div
+              class="flex flex-row flex-wrap gap-2 max-md:text-sm max-md:gap-1 my-1"
+            >
+              <h4
+                class="font-bold text-slate-100"
+              >
+                Status
+              </h4>
+              :
+               
+              <span>
+                Released
+              </span>
+            </div>
+            <p
+              class="text-sm text-zinc-200 my-2"
+            >
+              Several generations in the future following Caesar's reign, apes are now the dominant species and live harmoniously while humans have been reduced to living in the shadows. As a new tyrannical ape leader builds his empire, one young ape undertakes a harrowing journey that will cause him to question all that he has known about the past and to make choices that will define a future for apes and humans alike.
+            </p>
+          </div>
+        </div>
+      </section>
+    </div>
+  </body>,
+  "container": <div>
+    <section
+      style="width: 100%; height: 100%; background-image: url(https://image.tmdb.org/t/p/original/fqv8v6AycXKsivp1T5yKtLbGXce.jpg); background-size: cover; background-position: center; background-repeat: no-repeat;"
+    >
+      <div
+        class=" w-full h-full mx-auto bg-slate-900 bg-opacity-70 grid grid-cols-3 xl:grid-cols-4 gap-4 items-center overflow-hidden p-8 mt-6"
+      >
+        <img
+          alt="Kingdom of the Planet of the Apes"
+          class=" col-span-1 rounded-md shadow-md shadow-slate-400 my-auto"
+          src="https://image.tmdb.org/t/p/w500/gKkl37BQuKTanygYQG1pyYgLVgf.jpg"
+        />
+        <div
+          class="col-span-2 xl:col-span-3 my-auto flex flex-col"
+        >
+          <h1
+            class="text-xl font-bold text-slate-100 my-2 md:text-2xl lg:text-3xl"
+          >
+            Kingdom of the Planet of the Apes
+             (
+            2024
+            )
+          </h1>
+          <span
+            class="text-sm mb-4 font-serif italic"
+          >
+            No one can stop the reign.
+          </span>
+          <div
+            class="my-1"
+          >
+            <div
+              class="flex items-center gap-1"
+            >
+              <svg
+                class="lucide lucide-star text-yellow-500 text-yellow-500"
+                fill="currentColor"
+                height="20"
+                stroke="currentColor"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                stroke-width="2"
+                viewBox="0 0 24 24"
+                width="20"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <polygon
+                  points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"
+                />
+              </svg>
+              <svg
+                class="lucide lucide-star text-yellow-500 text-yellow-500"
+                fill="currentColor"
+                height="20"
+                stroke="currentColor"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                stroke-width="2"
+                viewBox="0 0 24 24"
+                width="20"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <polygon
+                  points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"
+                />
+              </svg>
+              <svg
+                class="lucide lucide-star text-yellow-500 text-yellow-500"
+                fill="currentColor"
+                height="20"
+                stroke="currentColor"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                stroke-width="2"
+                viewBox="0 0 24 24"
+                width="20"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <polygon
+                  points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"
+                />
+              </svg>
+              <div
+                style="position: relative; display: inline-block; width: 20px; height: 20px;"
+              >
+                <svg
+                  class="lucide lucide-star text-yellow-500 text-yellow-500"
+                  fill="none"
+                  height="20"
+                  stroke="currentColor"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="2"
+                  viewBox="0 0 24 24"
+                  width="20"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <polygon
+                    points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"
+                  />
+                </svg>
+                <div
+                  style="position: absolute; top: 0px; overflow: hidden; width: 50%;"
+                >
+                  <svg
+                    class="lucide lucide-star text-yellow-500 text-yellow-500"
+                    fill="currentColor"
+                    height="20"
+                    stroke="currentColor"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                    stroke-width="2"
+                    viewBox="0 0 24 24"
+                    width="20"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <polygon
+                      points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"
+                    />
+                  </svg>
+                </div>
+              </div>
+              <svg
+                class="lucide lucide-star text-yellow-500 text-gray-200"
+                fill="transparent"
+                height="20"
+                stroke="currentColor"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                stroke-width="2"
+                viewBox="0 0 24 24"
+                width="20"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <polygon
+                  points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"
+                />
+              </svg>
+              <span
+                class="bg-blue-100 text-blue-800 text-xs font-semibold px-2.5 py-0.5 rounded dark:bg-blue-200 dark:text-blue-800"
+              >
+                3.5
+              </span>
+            </div>
+          </div>
+          <div
+            class="flex flex-row flex-wrap gap-2 max-md:text-sm max-md:gap-1 my-1"
+          >
+            <h4
+              class="font-bold text-slate-100"
+            >
+              Total Votes
+            </h4>
+            :
+             
+            <span>
+              719
+            </span>
+          </div>
+          <div
+            class="flex flex-row flex-wrap gap-2 max-md:text-sm max-md:gap-1 my-1"
+            data-testid="genres"
+          >
+            <h4
+              class="font-bold text-slate-100"
+            >
+              Geners
+            </h4>
+            :
+             
+            <span>
+              Science Fiction, Adventure, Action
+            </span>
+          </div>
+          <div
+            class="flex flex-row flex-wrap gap-2 max-md:text-sm max-md:gap-1 my-1"
+            data-testid="runtime"
+          >
+            <h4
+              class="font-bold text-slate-100"
+            >
+              Runtime
+            </h4>
+            :
+             
+            <span>
+              145
+               minutes
+            </span>
+          </div>
+          <div
+            class="flex flex-row flex-wrap gap-2 max-md:text-sm max-md:gap-1 my-1"
+          >
+            <h4
+              class="font-bold text-slate-100"
+            >
+              Release Date
+            </h4>
+            :
+             
+            <span>
+              2024-05-08
+            </span>
+          </div>
+          <div
+            class="flex flex-row flex-wrap gap-2 max-md:text-sm max-md:gap-1 my-1"
+          >
+            <h4
+              class="font-bold text-slate-100"
+            >
+              Status
+            </h4>
+            :
+             
+            <span>
+              Released
+            </span>
+          </div>
+          <p
+            class="text-sm text-zinc-200 my-2"
+          >
+            Several generations in the future following Caesar's reign, apes are now the dominant species and live harmoniously while humans have been reduced to living in the shadows. As a new tyrannical ape leader builds his empire, one young ape undertakes a harrowing journey that will cause him to question all that he has known about the past and to make choices that will define a future for apes and humans alike.
+          </p>
+        </div>
+      </div>
+    </section>
+  </div>,
+  "debug": [Function],
+  "findAllByAltText": [Function],
+  "findAllByDisplayValue": [Function],
+  "findAllByLabelText": [Function],
+  "findAllByPlaceholderText": [Function],
+  "findAllByRole": [Function],
+  "findAllByTestId": [Function],
+  "findAllByText": [Function],
+  "findAllByTitle": [Function],
+  "findByAltText": [Function],
+  "findByDisplayValue": [Function],
+  "findByLabelText": [Function],
+  "findByPlaceholderText": [Function],
+  "findByRole": [Function],
+  "findByTestId": [Function],
+  "findByText": [Function],
+  "findByTitle": [Function],
+  "getAllByAltText": [Function],
+  "getAllByDisplayValue": [Function],
+  "getAllByLabelText": [Function],
+  "getAllByPlaceholderText": [Function],
+  "getAllByRole": [Function],
+  "getAllByTestId": [Function],
+  "getAllByText": [Function],
+  "getAllByTitle": [Function],
+  "getByAltText": [Function],
+  "getByDisplayValue": [Function],
+  "getByLabelText": [Function],
+  "getByPlaceholderText": [Function],
+  "getByRole": [Function],
+  "getByTestId": [Function],
+  "getByText": [Function],
+  "getByTitle": [Function],
+  "queryAllByAltText": [Function],
+  "queryAllByDisplayValue": [Function],
+  "queryAllByLabelText": [Function],
+  "queryAllByPlaceholderText": [Function],
+  "queryAllByRole": [Function],
+  "queryAllByTestId": [Function],
+  "queryAllByText": [Function],
+  "queryAllByTitle": [Function],
+  "queryByAltText": [Function],
+  "queryByDisplayValue": [Function],
+  "queryByLabelText": [Function],
+  "queryByPlaceholderText": [Function],
+  "queryByRole": [Function],
+  "queryByTestId": [Function],
+  "queryByText": [Function],
+  "queryByTitle": [Function],
+  "rerender": [Function],
+  "unmount": [Function],
+}
+`;

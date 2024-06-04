@@ -52,3 +52,7 @@ test("renders InfoBanner with data", () => {
   // Check overview
   expect(screen.getByText(new RegExp(mockData.overview))).toBeInTheDocument();
 });
+test("test snapshot", () => {
+  const banner = render(<InfoBanner data={mockData} />);
+  expect(banner).toMatchSnapshot();
+});
