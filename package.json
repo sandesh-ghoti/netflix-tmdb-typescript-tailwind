@@ -13,9 +13,9 @@
     "test:ui": "vitest --ui"
   },
   "dependencies": {
-    "@reduxjs/toolkit": "^2.3.0",
-    "lucide-react": "^0.462.0",
-    "firebase": "^10.14.1",
+    "@reduxjs/toolkit": "^2.2.4",
+    "firebase": "^11.0.0",
+    "lucide-react": "^0.379.0",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
     "react-redux": "^9.2.0",
